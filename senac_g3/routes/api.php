@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::any('/teste', function () {
+    return response([1 => 3, 2, 3, 4])->header('Content-Type', 'application/json');
+});
