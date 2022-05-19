@@ -9,4 +9,9 @@ class Produto extends Model
 {
     use HasFactory;
     protected $fillable = ['nome', 'imagem', 'preco', 'descricao'];
+
+    public function pedidos()
+    {
+        return $this->belongsToMany(Pedido::class)->using(PedidoProduto::class);
+    }
 }

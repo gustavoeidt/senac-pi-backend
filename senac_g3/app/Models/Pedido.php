@@ -17,6 +17,6 @@ class Pedido extends Model
 
     public function produtos()
     {
-        return $this->hasMany(Produto::class);
+        return $this->belongsToMany(Produto::class)->using(PedidoProduto::class);
     }
 }
