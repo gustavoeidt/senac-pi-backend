@@ -1,0 +1,96 @@
+### PRODUTOS
+GET http://localhost:8000/api/produtos HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:8000/api/produtos HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Produto 1",
+    "imagem":"url_da_imagem", 
+    "preco":"987.45",
+    "descricao":"Descricao do produto"
+}
+
+###
+GET http://localhost:8000/api/produtos/1 HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:8000/api/produtos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Produto atualizado 4",
+    "imagem":"url_da_imagem", 
+    "preco":"987.45",
+    "descricao":"Descricao do produto"
+}
+
+###
+DELETE http://localhost:8000/api/produtos/1 HTTP/1.1
+content-type: application/json
+
+
+### CLIENTES
+GET http://localhost:8000/api/clientes HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:8000/api/clientes HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Cliente",
+    "fone":"(88) 9877-9875", 
+    "endereco":"meu endereco"
+}
+
+###
+GET http://localhost:8000/api/clientes/1 HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:8000/api/clientes/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Cliente Atualiado",
+    "fone":"(88) 9877-9875", 
+    "endereco":"meu endereco"
+}
+
+###
+DELETE http://localhost:8000/api/clientes/1 HTTP/1.1
+content-type: application/json
+
+### PEDIDOS
+GET http://localhost:8000/api/pedidos HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:8000/api/pedidos HTTP/1.1
+content-type: application/json
+
+{
+    "cliente_id": "1",
+    "produtos": [1,2,3]
+}
+
+###
+GET http://localhost:8000/api/pedidos/1 HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:8000/api/pedidos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "cliente_id": "2",
+    "produtos": [1,2,3]
+}
+
+###
+DELETE http://localhost:8000/api/pedidos/1 HTTP/1.1
+content-type: application/json
