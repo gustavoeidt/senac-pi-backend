@@ -74,8 +74,12 @@ POST http://localhost:8000/api/pedidos HTTP/1.1
 content-type: application/json
 
 {
-    "cliente_id": "1",
-    "produtos": [1,2,3]
+    "cliente_id": "5",
+    "produtos": {
+        "10": {"quantidade": 20},
+        "20": {"quantidade": 40},
+        "30": {"quantidade": 60}
+        }
 }
 
 ###
@@ -88,7 +92,11 @@ content-type: application/json
 
 {
     "cliente_id": "2",
-    "produtos": [1,2,3]
+    "produtos": {
+        "10": {"quantidade": 20},
+        "20": {"quantidade": 40},
+        "30": {"quantidade": 60}
+        }
 }
 
 ###

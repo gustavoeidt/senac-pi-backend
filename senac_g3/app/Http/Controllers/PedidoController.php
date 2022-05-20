@@ -27,7 +27,9 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
+        $produtos = $request->input('produtos');
         $pedido = Pedido::create($request->all());
+        $pedido->produtos()->sync($produtos);
         return new PedidoResource($pedido);
     }
 
@@ -51,7 +53,9 @@ class PedidoController extends Controller
      */
     public function update(Request $request, Pedido $pedido)
     {
+        $produtos = $request->input('produtos');
         $pedido->update($request->all());
+        $pedido->produtos()->sync($produtos);
         return new PedidoResource($pedido);
     }
 
